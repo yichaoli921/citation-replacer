@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
+venv/
+.venv/
+env/
+ENV/
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# 项目临时产物（用户本地）
+tmp/
+tmp_*/
+output/
+*.bak
+*.docx.bak
+*.tmp
+!tests/fixtures/*.docx
+!tests/fixtures/*.pdf
+
+# docx/pdf 输出（避免误提交）
+*.replaced.docx
+*_final.docx
+*_out.docx
+
+# 中间稿
+tmp_*.md
+tmp_*.tsv
+*_with_level.tsv
+*_with_level.md
+
+# 用户配置
+.env
+.env.local
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 缓存
+.cache/
+*.pid
