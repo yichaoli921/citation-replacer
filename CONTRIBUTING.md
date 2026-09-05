@@ -194,8 +194,8 @@ ordering: by_first_appearance
 2. 用 `pdf_to_md.py` 转成 MD
 3. 用 `extract_style_from_samples.py` 自动生成草稿
 4. 手动核对（自动报告仅供参考）
-5. 保存为 `references/journal-styles/<journal-name>.md`
-6. 在 README.md "支持期刊风格" 表中加一行
+5. 先保留为 `tmp_<期刊>文献引用风格.md`，说明样文来源和判断依据
+6. 如果该期刊规则稳定、确实值得复用，再保存为 `references/journal-styles/<journal-name>.md` 作为样例/回归测试材料
 7. 提 PR
 
 ---

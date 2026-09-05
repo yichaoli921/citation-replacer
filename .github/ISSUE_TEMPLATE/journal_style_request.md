@@ -1,7 +1,7 @@
 ---
-name: 期刊风格请求 / Journal Style Request
-about: 请求新增期刊风格
-title: '[JOURNAL] '
+name: 目标期刊样文适配 / Target Journal Sample Request
+about: 提供目标期刊最新样文，请求总结或沉淀引用风格
+title: '[TARGET JOURNAL] '
 labels: enhancement, journal-style
 assignees: ''
 ---
@@ -13,14 +13,14 @@ assignees: ''
 - **官网**：
 - **目标学科**：（如经济学、管理学、地理学）
 
-## 已知样文
+## 目标期刊最新样文
 
-如已有 PDF 链接，请贴在下方：
+请尽量提供最新一期两篇正刊文章 PDF 或官方链接：
 
 - 样文 1：
 - 样文 2：
 
-## 期望支持的能力
+## 期望适配的能力
 
 - [ ] 文内 `［1-3］` 上标
 - [ ] 叙述式 `作者（YYYY）` → `作者［N］`
@@ -37,4 +37,4 @@ assignees: ''
 
 - [ ] 自己提 PR 实现
 - [ ] 提供样文 PDF
-- [ ] 测试该风格
+- [ ] 测试该样文总结出的规则

@@ -15,7 +15,7 @@
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│  Stage 1：风格学习（可选）                                          │
+│  Stage 1：目标期刊样文学习（按投稿期刊格式处理时必需）                  │
 │  scripts/extract_style_from_samples.py                            │
 │  → tmp_<期刊>文献引用风格.md                                       │
 └─────────────────────────────────────────────────────────────────┘
@@ -76,7 +76,7 @@ scripts/
   └── pdf_to_md.py  ← 工具，pdftotext/pdfplumber/pypdf fallback
 
 references/
-  ├── journal-styles/*.md  ← YAML 配置，被 replace_citations.py 读取
+  ├── journal-styles/*.md  ← 可复用样例/回归测试风格，被 replace_citations.py 读取
   ├── journal-levels/swufe_2018.tsv  ← TSV，被 enrich_journal_level.py 读取
   ├── regex-cheatsheet.md  ← 文档
   ├── workflow-memo.md  ← 文档

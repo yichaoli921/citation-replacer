@@ -63,7 +63,7 @@
 - **作者归一化**（`scripts/normalize_authors.py`）
   - OCR 误字前缀
   - 缺逗号容忍
-- **三种期刊风格**：jingji-dili、gb-t-7714、dili-xuebao
+- **样例风格文件**：jingji-dili、gb-t-7714、dili-xuebao（用于示例和回归测试，不代表支持期刊上限）
 - **完整 SKILL.md** 主入口
 
 ---

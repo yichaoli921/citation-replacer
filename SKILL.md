@@ -38,9 +38,9 @@ citation-replacer/
 ├── SKILL.md                              # 本文件
 ├── references/
 │   ├── journal-styles/
-│   │   ├── jingji-dili.md               # 《经济地理》（已测试）
-│   │   ├── gb-t-7714.md                 # GB/T 7714-2015 国标通用
-│   │   └── dili-xuebao.md               # 《地理学报》
+│   │   ├── jingji-dili.md               # 开发样例/回归测试材料
+│   │   ├── gb-t-7714.md                 # 开发样例/回归测试材料
+│   │   └── dili-xuebao.md               # 开发样例/回归测试材料
 │   ├── journal-levels/
 │   │   └── swufe_2018.tsv               # 西财 2018 版期刊等级目录（4849 条）
 │   ├── regex-cheatsheet.md              # 各种引用检测正则
@@ -160,16 +160,18 @@ number  entry                                              journal         level
 - 期刊不在目录中 → 标记 `未在西财目录中（《期刊名》）`
 - 用户可指定自己的目录：`<journal_tsv>`
 
-## Citation Style Selection
+## Style Source Priority
 
-| Style | File | Bracket | Period | DOI 默认 |
-|---|---|---|---|---|
-| **《经济地理》** | `jingji-dili.md` | `［］` 全角 | `. ` 半角 | 不写（默认）|
-| **GB/T 7714** | `gb-t-7714.md` | `[]` 半角 | `. ` 半角 | 保留 |
-| **《地理学报》** | `dili-xuebao.md` | `［］` 全角 | `. ` 半角 | 保留 |
-| **目标期刊** | `extract_style_from_samples.py` 自动生成 | — | — | — |
+This skill is sample-driven. It must not assume the user is submitting only to 《经济地理》, 《地理学报》, or a GB/T 7714-style venue.
 
-切换风格：脚本顶部 `STYLE = load_style('<name>')`。
+Priority:
+
+1. The current task's two latest target-journal sample articles.
+2. The Markdown style memo generated from those samples, such as `tmp_<期刊>文献引用风格.md`.
+3. A task-specific style file saved as `references/journal-styles/<target-journal>.md` after the memo is reviewed.
+4. Existing files in `references/journal-styles/` only as examples, regression fixtures, or emergency fallbacks.
+
+If no current sample articles are available, ask the user for two latest target-journal PDFs/MDs before claiming to format for that journal. Do not present bundled example styles as the supported journal list.
 
 ## Critical Constraints（不能犯的错——基于本轮工作沉淀）
 
